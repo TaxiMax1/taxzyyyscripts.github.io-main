@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://txzscripts.dev/',
+  siteUrl: 'https://docs.taxzyyyscripts.com/',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   outDir: './out',

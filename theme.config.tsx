@@ -6,7 +6,7 @@ import Search from '@components/Search';
 function useHead() {
   const { asPath } = useRouter();
   const { frontMatter, title } = useConfig();
-  const url = `https://txzscripts.dev${asPath}`;
+  const url = `https://taxzyyyscripts.dev${asPath}`;
   const description = frontMatter.description || "Documentation for Taxzyyy's resources for FiveM";
 
   return (

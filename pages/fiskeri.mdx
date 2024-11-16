@@ -1,0 +1,112 @@
+---
+title: Fiskeri
+---
+
+import ResourceLinks from '@components/resource-links';
+import { Steps, Tabs, Tab } from 'nextra-theme-docs';
+import { Callout } from 'nextra/components';
+
+# Fiskeri Script
+
+<ResourceLinks link="https://txztebex.tebex.io/package/6464315" />
+
+Tag din FiveM-server til næste niveau med Advanced Fiskeri! Dette advanced men simplet script gir dig en oplevelse med spændende gameplay, der tilbyder spillerne den ultimative udfordring.
+
+## Installation
+
+<Steps>
+### Installer alle ressources
+- [ox_lib](https://github.com/overextended/ox_lib)
+- [ox_inventory](https://github.com/overextended/ox_inventory)
+- [ox_target](https://github.com/overextended/ox_target)
+
+### Download scriptet fra din keymaster
+
+### Træk og slip ressourcen i din ressourcemappe
+
+### Tilføj dette i din server.cfg
+``` bash
+ensure txz_fishing
+```
+
+### så er Fiske skriptet klar!
+
+``` bash
+    ## Items // ox_inventory/data/items.lua
+    ['fishingrod'] = {
+        label = 'Fiskestang',
+        weight = 1000,
+        stack = false
+    },
+    ['fiskebevis'] = {
+        label = 'Fiske Bevis',
+        weight = 100,
+        stack = false
+    },
+    ['largemouthbass'] = {
+        label = 'Large Mouth Bass',
+        weight = 4000,
+        stack = true,
+    },
+    ['redfish'] = {
+        label = 'Red Fish',
+        weight = 3000,
+        stack = true,
+    },
+    ['salmon'] = {
+        label = 'Laks',
+        weight = 300,
+        stack = true,
+    },
+    ['trout'] = {
+        label = 'Ørred',
+        weight = 300,
+        stack = true,
+    },
+    ['anchovy'] = {
+        label = 'Ansjos',
+        weight = 300,
+        stack = true,
+    },
+    ['tuna'] = {
+        label = 'Tun',
+        weight = 300,
+        stack = true,
+        },	
+    ['stingray'] = {
+        label = 'Sting Ray',
+        weight = 3000,
+        stack = true,
+    },
+    ['stripedbass'] = {
+        label = 'Striped Bass',
+        weight = 3000,
+        stack = true,
+    },
+
+    ## Exports
+    -- Tilføj XP
+    exports['txz_fishing']:AddXP(source, 100)
+
+    // Tilføj Level
+    exports['txz_fishing']:AddLevel(source, 1)
+
+    -- Tilføj Total Fish
+    exports['txz_fishing']:AddTotalFish(source, 5)
+
+    -- Set Ny Speed
+    exports['txz_fishing']:NewSpeed(source, 'fast')
+
+    -- Fjern XP
+    exports['txz_fishing']:RemoveXP(source, 50)
+
+    -- Fjern Level
+    exports['txz_fishing']:RemoveLevel(source, 1)
+
+    -- Fjern Total Fish
+    exports['txz_fishing']:RemoveTotalFish(source, 2)
+
+    ## Config
+    {name = 'Navnet på "fisken"', item = 'spawnkoden', chance = chancen på at få den, momey = hvor meget den sælges for}, // Husk Komma!
+```
+</Steps>
